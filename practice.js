@@ -55,8 +55,8 @@ function doubleCheck(arr){
 //and goodBoy (a boolean).
 
 var dog = {
-  name: "fido",
-  color: "black",
+  name: "Fido",
+  color: "Brown",
   age: 4,
   goodBoy: true
 };//Code Here
@@ -75,7 +75,7 @@ dog.bark = function(){
 
 //Store the result of invoking the bark method in a variable called ruff.
 
-var ruff = dog.bark;//Code Here
+var ruff = dog.bark();//Code Here
 
 //////////////////PROBLEM 6////////////////////
 
@@ -132,7 +132,7 @@ function sampleCallbackTwo() {
 }
 
 function invoker(callback){
-  return callback
+  return callback()
 };//Code Here
 
 //////////////////PROBLEM 9////////////////////
@@ -173,12 +173,16 @@ let pondScope = ["duck", "realDuck"];
 //Create a function called outerFn which returns an anonymous
 //function which returns your name.
 
-//Code Here
+function outerFn(){
+  return function(){
+    return "Mike Morris"
+  };
+};//Code Here
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-//Code Here
+var innerFn = outerFn();//Code Here
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
-//Code Here
+finalResult = innerFn(); //Code Here
